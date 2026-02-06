@@ -14,9 +14,9 @@ It’s important to keep in mind that this task mostly defines the datasets used
 
 1.2. Literature review
 
-	While most of the research & papers me and Kaiji have discussed previously covered fashion, music and art recommendations, it would be a challenge to find the right evaluation for such data, since a correct answer rarely exists and such recommendations are subjective - which would be a problem since I’ll need to prove the project’s relevance to the inspecting staff.
+While most of the research & papers me and Kaiji have discussed previously covered fashion, music and art recommendations, it would be a challenge to find the right evaluation for such data, since a correct answer rarely exists and such recommendations are subjective - which would be a problem since I’ll need to prove the project’s relevance to the inspecting staff.
 
-	Looking at AgentRecBench and SynthTRIPs per my curator’s recommendation inspired me to consider working with data such as geographical locations where there exist more objective metrics. My project would make use of that to create a new solution for event management sphere, utilising LLM agents to ensure deeper and more efficient analysis.
+Looking at AgentRecBench and SynthTRIPs per my curator’s recommendation inspired me to consider working with data such as geographical locations where there exist more objective metrics. My project would make use of that to create a new solution for event management sphere, utilising LLM agents to ensure deeper and more efficient analysis.
 
 3. Objectives
 Along with starting some practical work, urgently find more relevant research to form a better understanding of the status quo and similar existing solutions, identify more specifics unsatisfactions and narrow our objective
