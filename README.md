@@ -19,6 +19,7 @@ While most of the research & papers me and Kaiji have discussed previously cover
 Looking at AgentRecBench and SynthTRIPs per my curator’s recommendation inspired me to consider working with data such as geographical locations where there exist more objective metrics. My project would make use of that to create a new solution for event management sphere, utilising LLM agents to ensure deeper and more efficient analysis.
 
 3. Objectives
+
 Along with starting some practical work, urgently find more relevant research to form a better understanding of the status quo and similar existing solutions, identify more specifics unsatisfactions and narrow our objective
 Keep looking for similar relevant datasets
 Establish metrics for evaluating the model’s performance
