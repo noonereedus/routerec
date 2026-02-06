@@ -12,7 +12,7 @@ The user could choose between consulting 1 LLM agent or picking X LLM agents to 
 
 It’s important to keep in mind that this task mostly defines the datasets used and characterizes the project’s “flavour”, while the necessary technical achievement will mostly be fulfilled by realizing the auction model for LLM agents.
 
-1.2. Literature review
+2. Literature review
 
 While most of the research & papers me and Kaiji have discussed previously covered fashion, music and art recommendations, it would be a challenge to find the right evaluation for such data, since a correct answer rarely exists and such recommendations are subjective - which would be a problem since I’ll need to prove the project’s relevance to the inspecting staff.
 
