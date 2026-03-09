@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/python/SASRec/main.py", line 8, in <module>
+    from util import *
+  File "/projects/u5fi/byebyevlad/python/SASRec/util.py", line 82
+    print '.',
+    ^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?

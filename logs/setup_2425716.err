@@ -1,0 +1,4 @@
+  File "/projects/u5fi/byebyevlad/python/SASRec/main.py", line 43
+    print 'average sequence length: %.2f' % (cc / len(user_train))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?

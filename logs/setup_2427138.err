@@ -1,0 +1,32 @@
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/projects/u5fi/byebyevlad/python/SASRec.pytorch/python/main.py", line 57, in <module>
+    model = SASRec(usernum, itemnum, args).to(args.device) # no ReLU activation in original SASRec implementation?
+  File "/projects/u5fi/byebyevlad/python/SASRec.pytorch/python/model.py", line 36, in __init__
+    self.item_emb = torch.nn.Embedding(self.item_num+1, args.hidden_units, padding_idx=0)
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 142, in __init__
+    self.weight = Parameter(torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/nn/modules/sparse.py:142: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /root/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  self.weight = Parameter(torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/python/SASRec.pytorch/python/main.py", line 57, in <module>
+    model = SASRec(usernum, itemnum, args).to(args.device) # no ReLU activation in original SASRec implementation?
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1145, in to
+    return self._apply(convert)
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 820, in _apply
+    param_applied = fn(param)
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1143, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/cuda/__init__.py", line 239, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled

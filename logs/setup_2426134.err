@@ -1,0 +1,9 @@
+WARNING:tensorflow:From /scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:98: disable_resource_variables (from tensorflow.python.ops.resource_variables_toggle) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/python/SASRec/main.py", line 53, in <module>
+    model = Model(usernum, itemnum, args)
+  File "/projects/u5fi/byebyevlad/python/SASRec/model.py", line 6, in __init__
+    self.is_training = tf.placeholder(tf.bool, shape=())
+AttributeError: module 'tensorflow' has no attribute 'placeholder'

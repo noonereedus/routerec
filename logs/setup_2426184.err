@@ -1,0 +1,34 @@
+WARNING:tensorflow:From /scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:98: disable_resource_variables (from tensorflow.python.ops.resource_variables_toggle) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/util/dispatch.py:1264: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/python/SASRec/main.py", line 53, in <module>
+    model = Model(usernum, itemnum, args)
+  File "/projects/u5fi/byebyevlad/python/SASRec/model.py", line 17, in __init__
+    self.seq, item_emb_table = embedding(self.input_seq,
+  File "/projects/u5fi/byebyevlad/python/SASRec/modules.py", line 118, in embedding
+    lookup_table = tf.get_variable('lookup_table',
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/ops/variable_scope.py", line 1565, in get_variable
+    return get_variable_scope().get_variable(
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/ops/variable_scope.py", line 1275, in get_variable
+    return var_store.get_variable(
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/ops/variable_scope.py", line 520, in get_variable
+    return _true_getter(
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/ops/variable_scope.py", line 473, in _true_getter
+    return self._get_single_variable(
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/ops/variable_scope.py", line 939, in _get_single_variable
+    if regularizer(v) is not None:
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/keras/src/regularizers/regularizers.py", line 265, in __call__
+    return self.l2 * ops.sum(ops.square(x))
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/keras/src/ops/numpy.py", line 7041, in square
+    return backend.numpy.square(x)
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/keras/src/backend/tensorflow/sparse.py", line 387, in sparse_wrapper
+    return func(x, *args, **kwargs)
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/keras/src/backend/tensorflow/numpy.py", line 2979, in square
+    if standardize_dtype(x.dtype) == "bool":
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/keras/src/backend/common/variables.py", line 583, in standardize_dtype
+    raise ValueError(f"Invalid dtype: {dtype}")
+ValueError: Invalid dtype: float32_ref

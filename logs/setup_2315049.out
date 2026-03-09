@@ -1,0 +1,15 @@
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading SynthTRIPs...
+DatasetDict({
+    test: Dataset({
+        features: ['text'],
+        num_rows: 80
+    })
+})
+Test sample:
+{'text': 'You are given a query and a list of filters. Your task is to identify how many filters are present in the query. Only return the number of matches and your explanation for this in the following format: '}
+
+Job finished at: Sat Feb 14 02:29:37 PM UTC 2026

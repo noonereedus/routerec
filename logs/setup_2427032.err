@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/python/SASRec.pytorch/python/main.py", line 3, in <module>
+    import torch
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/__init__.py", line 1891, in <module>
+    from torch._tensor import Tensor  # usort: skip
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/_tensor.py", line 110, in <module>
+    class Tensor(torch._C.TensorBase):
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/torch/_tensor.py", line 112, in Tensor
+    __dlpack_c_exchange_api__: object = torch._C._dlpack_exchange_api()
+AttributeError: module 'torch._C' has no attribute '_dlpack_exchange_api'

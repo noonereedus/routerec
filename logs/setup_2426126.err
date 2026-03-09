@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/python/SASRec/main.py", line 46, in <module>
+    config = tf.ConfigProto()
+AttributeError: module 'tensorflow' has no attribute 'ConfigProto'

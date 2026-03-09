@@ -1,0 +1,12 @@
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading SynthTRIPs...
+DatasetDict({
+    test: Dataset({
+        features: ['text'],
+        num_rows: 80
+    })
+})
+Train sample:

@@ -1,0 +1,16 @@
+WARNING:tensorflow:From /scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:98: disable_resource_variables (from tensorflow.python.ops.resource_variables_toggle) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:tensorflow:From /scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/util/dispatch.py:1264: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/python/SASRec/main.py", line 53, in <module>
+    model = Model(usernum, itemnum, args)
+  File "/projects/u5fi/byebyevlad/python/SASRec/model.py", line 17, in __init__
+    self.seq, item_emb_table = embedding(self.input_seq,
+  File "/projects/u5fi/byebyevlad/python/SASRec/modules.py", line 122, in embedding
+    regularizer=tf.contrib.layers.l2_regularizer(l2_reg))
+  File "/scratch/u5fi/byebyevlad.u5fi/venvs/my_env/lib/python3.10/site-packages/tensorflow/python/util/module_wrapper.py", line 232, in _getattr
+    attr = getattr(self._tfmw_wrapped_module, name)
+AttributeError: module 'tensorflow.compat.v1' has no attribute 'contrib'

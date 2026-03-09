@@ -1,0 +1,7 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "/projects/u5fi/byebyevlad/dataset-test.py", line 15, in <module>
+    print(ds["train"][0])
+  File "/usr/local/lib/python3.10/dist-packages/datasets/dataset_dict.py", line 86, in __getitem__
+    return super().__getitem__(k)
+KeyError: 'train'
