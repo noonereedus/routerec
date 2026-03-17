@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/main.py", line 40, in <module>
+    u2i_index, i2u_index = build_index(args.dataset)
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/utils.py", line 11, in build_index
+    ui_mat = np.loadtxt('data/%s.txt' % dataset_name, dtype=np.int32)
+  File "/usr/local/lib/python3.10/dist-packages/numpy/lib/npyio.py", line 1356, in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+  File "/usr/local/lib/python3.10/dist-packages/numpy/lib/npyio.py", line 999, in _read
+    arr = _load_from_filelike(
+ValueError: the number of columns changed from 54 to 130 at row 2; use `usecols` to select a subset and avoid this error

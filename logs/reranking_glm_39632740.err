@@ -1,0 +1,43 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+A new version of the following files was downloaded from https://huggingface.co/THUDM/glm-4-9b-chat:
+- modeling_chatglm.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/llm-reranking.py", line 230, in <module>
+    main()
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/llm-reranking.py", line 144, in main
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 356, in from_pretrained
+    model_class = get_class_from_dynamic_module(
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 583, in get_class_from_dynamic_module
+    return get_class_in_module(class_name, final_module, force_reload=force_download)
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 309, in get_class_in_module
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/rds/projects/f/fengyv-kaiji/vxk276/hf_cache/modules/transformers_modules/THUDM/glm_hyphen_4_hyphen_9b_hyphen_chat/bd8234fe5e0c09c48637a92abb0c797cb5fa0e73/modeling_chatglm.py", line 18, in <module>
+    from transformers.modeling_utils import PreTrainedModel
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 86, in <module>
+    from .loss.loss_utils import LOSS_MAPPING
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/loss/loss_utils.py", line 20, in <module>
+    from .loss_d_fine import DFineForObjectDetectionLoss
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/loss/loss_d_fine.py", line 21, in <module>
+    from .loss_for_object_detection import box_iou
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/loss/loss_for_object_detection.py", line 31, in <module>
+    from transformers.image_transforms import center_to_corners_format
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/image_transforms.py", line 22, in <module>
+    from .image_utils import (
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/image_utils.py", line 53, in <module>
+    from torchvision.transforms import InterpolationMode
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/__init__.py", line 10, in <module>
+    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/_meta_registrations.py", line 164, in <module>
+    def meta_nms(dets, scores, iou_threshold):
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/torch/library.py", line 1023, in register
+    use_lib._register_fake(op_name, func, _stacklevel=stacklevel + 1)
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/torch/library.py", line 214, in _register_fake
+    handle = entry.fake_impl.register(func_to_register, source)
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/torch/_library/fake_impl.py", line 31, in register
+    if torch._C._dispatch_has_kernel_for_dispatch_key(self.qualname, "Meta"):
+RuntimeError: operator torchvision::nms does not exist

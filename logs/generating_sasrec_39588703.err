@@ -1,0 +1,18 @@
+/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/generate-candidates.py:177: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(model_path, map_location='cpu'))
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/generate-candidates.py", line 183, in <module>
+    load_metadata(args.ml1m_path)
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/generate-candidates.py", line 15, in load_metadata
+    movies = pd.read_csv(
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/data/ml-1m.txt/movies.dat'

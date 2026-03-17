@@ -1,0 +1,1 @@
+FATAL:   While checking container encryption: could not open image /scratch/kxz571/vxk276/containers/my_container.sif: failed to retrieve path for /scratch/kxz571/vxk276/containers/my_container.sif: lstat /scratch/kxz571/vxk276/containers: no such file or directory

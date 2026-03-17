@@ -1,0 +1,28 @@
++--------------------------------------------------------------------------+
+| Job on the BlueBEAR cluster:
+| Starting at Sat Mar 14 00:27:52 2026 for kxz571(924433)
+| Identity jobid 39590886 jobname tryBlueBear
+| Running against project fengyv-kaiji and in partition icelake-gpua100-shared
+| Requested cpu=8,mem=64G,node=1,billing=8,gres/gpu=1 - 03:00:00 walltime
+| Allocated cpu=8,mem=64G,node=1,billing=8,gres/gpu=1
+| Assigned to nodes bear-pg0208u10a
+| Command /rds/projects/f/fengyv-kaiji/vxk276/job.sh
+| WorkDir /rds/projects/f/fengyv-kaiji/vxk276
++--------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+| Finished at Sat Mar 14 00:28:00 2026 for kxz571(924433) on the BlueBEAR Cluster
+| Required (00:00.396 cputime, 870K memory used) - 00:00:08 walltime
+| JobState COMPLETING - Reason NonZeroExitCode
+| Exitcode 2:0
++--------------------------------------------------------------------------+
+Job efficiency stats from seff for Job ID: 39590886
+Cluster: paddington
+User/Group: kxz571/users
+State: FAILED (exit code 2)
+Nodes: 1
+Cores per node: 8
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:01:04 core-walltime
+Job Wall-clock time: 00:00:08
+Memory Utilized: 870.00 KB
+Memory Efficiency: 0.00% of 64.00 GB

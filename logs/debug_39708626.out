@@ -1,0 +1,63 @@
+
+Job started at: Sun Mar 15 13:17:35 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+
+User: 1 (type: <class 'str'>)
+  Ground truth: 48 (type: <class 'int'>)
+  Num candidates: 51
+  First 5 items: [355, 1191, 1905, 1901, 1552] (type: <class 'int'>)
+  GT in top 10? False
+  GT in top 50? True
+  GT in all items? True
+  GT(int) in items(int)? False
+
+User: 2 (type: <class 'str'>)
+  Ground truth: 1738 (type: <class 'int'>)
+  Num candidates: 51
+  First 5 items: [1334, 203, 1654, 973, 1029] (type: <class 'int'>)
+  GT in top 10? False
+  GT in top 50? True
+  GT in all items? True
+  GT(int) in items(int)? False
+
+User: 3 (type: <class 'str'>)
+  Ground truth: 1901 (type: <class 'int'>)
+  Num candidates: 51
+  First 5 items: [2587, 1901, 2711, 2512, 1821] (type: <class 'int'>)
+  GT in top 10? True
+  GT in top 50? True
+  GT in all items? True
+  GT(int) in items(int)? True
+
+User: 4 (type: <class 'str'>)
+  Ground truth: 1775 (type: <class 'int'>)
+  Num candidates: 51
+  First 5 items: [2375, 107, 576, 444, 1200] (type: <class 'int'>)
+  GT in top 10? False
+  GT in top 50? True
+  GT in all items? True
+  GT(int) in items(int)? False
+
+User: 5 (type: <class 'str'>)
+  Ground truth: 280 (type: <class 'int'>)
+  Num candidates: 51
+  First 5 items: [990, 3038, 1659, 1561, 1095] (type: <class 'int'>)
+  GT in top 10? False
+  GT in top 50? True
+  GT in all items? True
+  GT(int) in items(int)? False
+
+
+=== QWEN RERANKED ===
+First user: 1 (type: <class 'str'>)
+Rankings: [1905, 968, 355, 2944, 1552, 1191, 1898, 1901, 34, 1907]
+Type of items: <class 'int'>
+
+SASRec top 10: [355, 1191, 1905, 1901, 1552, 1907, 968, 1898, 2944, 34]
+Qwen top 10:   [1905, 968, 355, 2944, 1552, 1191, 1898, 1901, 34, 1907]
+Are they the same? False
+
+Job finished at: Sun 15 Mar 13:17:35 GMT 2026

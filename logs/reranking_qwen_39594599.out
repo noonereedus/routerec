@@ -1,0 +1,25 @@
+
+Job started at: Sat Mar 14 01:37:20 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading evaluation data...
+Loading model: Qwen/Qwen2-7B-Instruct
+Model loaded.
+  Processed 10/100 users (0 failed)
+  Processed 20/100 users (0 failed)
+  Processed 30/100 users (0 failed)
+  Processed 40/100 users (0 failed)
+  Processed 50/100 users (0 failed)
+  Processed 60/100 users (0 failed)
+  Processed 70/100 users (0 failed)
+  Processed 80/100 users (0 failed)
+  Processed 90/100 users (0 failed)
+  Processed 100/100 users (0 failed)
+
+Done! Reranked 100 users.
+Failed: 0
+Saved to: evaluation_data/qwen_reranked.json
+
+Job finished at: Sat 14 Mar 01:42:13 GMT 2026

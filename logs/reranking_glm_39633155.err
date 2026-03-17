@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  10%|█         | 1/10 [00:06<00:57,  6.39s/it]Fetching 10 files:  20%|██        | 2/10 [00:06<00:23,  2.99s/it]Fetching 10 files:  50%|█████     | 5/10 [00:07<00:05,  1.04s/it]Fetching 10 files:  90%|█████████ | 9/10 [00:10<00:00,  1.31it/s]Fetching 10 files: 100%|██████████| 10/10 [00:10<00:00,  1.00s/it]
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/llm-reranking.py", line 231, in <module>
+    main()
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/llm-reranking.py", line 144, in main
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 367, in from_pretrained
+    return model_class.from_pretrained(
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4094, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/rds/projects/f/fengyv-kaiji/vxk276/hf_cache/modules/transformers_modules/THUDM/glm_hyphen_4_hyphen_9b_hyphen_chat/bd8234fe5e0c09c48637a92abb0c797cb5fa0e73/modeling_chatglm.py", line 918, in __init__
+    self.max_sequence_length = config.max_length
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 164, in __getattribute__
+    return super().__getattribute__(key)
+AttributeError: 'ChatGLMConfig' object has no attribute 'max_length'. Did you mean: 'seq_length'?

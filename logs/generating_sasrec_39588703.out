@@ -1,0 +1,7 @@
+
+Job started at: Fri 13 Mar 22:50:41 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Model loaded from: ml-1m_default/SASRec.epoch=200.lr=0.001.layer=2.head=1.hidden=50.maxlen=200.pth

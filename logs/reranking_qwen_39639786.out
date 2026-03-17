@@ -1,0 +1,70 @@
+
+Job started at: Sat Mar 14 15:45:26 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading evaluation data...
+Loading model: Qwen/Qwen2-7B-Instruct
+Model loaded.
+
+=== User 1 ===
+Raw LLM response:
+ [ID355, ID1191, ID1905, ID1901, ID1552, ID1907, ID968, ID1898, ID2944, ID34]
+```json
+["ID355", "ID1191", "ID1905", "ID1901", "ID1552", "ID1907", "ID968", "ID1898", "ID2944", "ID34"]
+```
+Parsed IDs: []
+Num parsed: 0
+
+=== User 2 ===
+Raw LLM response:
+ [ID1334, ID203, ID1654, ID973, ID1029, ID148, ID180, ID666, ID163, ID1384]
+```json
+["ID1334", "ID203", "ID1654", "ID973", "ID1029", "ID148", "ID180", "ID666", "ID163", "ID1384"]
+```
+Parsed IDs: []
+Num parsed: 0
+
+=== User 3 ===
+Raw LLM response:
+ [ID2587, ID1901, ID2711, ID2512, ID2111, ID2991, ID3133, ID1216, ID347, ID1994]
+```json
+["ID2587", "ID1901", "ID2711", "ID2512", "ID2111", "ID2991", "ID3133", "ID1216", "ID347", "ID1994"]
+```
+Parsed IDs: []
+Num parsed: 0
+
+=== User 4 ===
+Raw LLM response:
+ [ID2375, ID107, ID576, ID444, ID1200, ID1111, ID1479, ID2741, ID803, ID2014]
+```json
+["ID2375", "ID107", "ID576", "ID444", "ID1200", "ID1111", "ID1479", "ID2741", "ID803", "ID2014"]
+```
+Parsed IDs: []
+Num parsed: 0
+
+=== User 5 ===
+Raw LLM response:
+ [ID990, ID3038, ID1659, ID1561, ID1095, ID1537, ID363, ID1446, ID2250, ID1023]
+```json
+["ID990", "ID3038", "ID1659", "ID1561", "ID1095", "ID1537", "ID363", "ID1446", "ID2250", "ID1023"]
+```
+Parsed IDs: []
+Num parsed: 0
+  Processed 10/100 users (0 failed)
+  Processed 20/100 users (0 failed)
+  Processed 30/100 users (0 failed)
+  Processed 40/100 users (0 failed)
+  Processed 50/100 users (0 failed)
+  Processed 60/100 users (0 failed)
+  Processed 70/100 users (0 failed)
+  Processed 80/100 users (0 failed)
+  Processed 90/100 users (0 failed)
+  Processed 100/100 users (0 failed)
+
+Done! Reranked 100 users.
+Failed: 0
+Saved to: evaluation_data/qwen_reranked.json
+
+Job finished at: Sat 14 Mar 15:51:17 GMT 2026

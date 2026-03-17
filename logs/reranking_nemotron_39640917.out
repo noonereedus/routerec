@@ -1,0 +1,58 @@
+
+Job started at: Sat Mar 14 19:33:22 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading evaluation data...
+Loading model: nvidia/Nemotron-Mini-4B-Instruct
+Model loaded.
+
+=== User 1 ===
+Raw LLM response:
+
+Parsed positions: []
+Mapped item IDs: []
+
+=== User 2 ===
+Raw LLM response:
+
+[3, 7, 1, 9, 5, 2, 8, 4, 10, 6]
+Parsed positions: [3, 7, 1, 9, 5, 2, 8, 4, 10, 6]
+Mapped item IDs: [1654, 180, 1334, 163, 1029, 203, 666, 973, 1384, 148]
+
+=== User 3 ===
+Raw LLM response:
+
+Parsed positions: []
+Mapped item IDs: []
+
+=== User 4 ===
+Raw LLM response:
+
+[12, 13, 1, 9, 5, 2, 8, 4, 10, 6]
+Parsed positions: [12, 13, 1, 9, 5, 2, 8, 4, 10, 6]
+Mapped item IDs: [1196, 1821, 2375, 803, 1200, 107, 2741, 444, 2014, 1111]
+
+=== User 5 ===
+Raw LLM response:
+
+[3, 7, 1, 9, 5, 2, 8, 4, 10, 6]
+Parsed positions: [3, 7, 1, 9, 5, 2, 8, 4, 10, 6]
+Mapped item IDs: [1659, 363, 990, 2250, 1095, 3038, 1446, 1561, 1023, 1537]
+  Processed 10/100 users (0 failed)
+  Processed 20/100 users (0 failed)
+  Processed 30/100 users (0 failed)
+  Processed 40/100 users (0 failed)
+  Processed 50/100 users (0 failed)
+  Processed 60/100 users (0 failed)
+  Processed 70/100 users (0 failed)
+  Processed 80/100 users (0 failed)
+  Processed 90/100 users (0 failed)
+  Processed 100/100 users (0 failed)
+
+Done! Reranked 100 users.
+Failed: 0
+Saved to: evaluation_data/nemotron_reranked.json
+
+Job finished at: Sat 14 Mar 19:35:04 GMT 2026

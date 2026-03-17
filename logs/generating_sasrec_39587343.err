@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/generate-candidates.py", line 166, in <module>
+    model = SASRec(usernum, itemnum, args).to('cpu')
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/model.py", line 31, in __init__
+    self.dev = args.device
+AttributeError: 'Namespace' object has no attribute 'device'

@@ -1,0 +1,27 @@
+
+Job started at: Fri 13 Mar 23:00:04 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Model loaded from: ml-1m_default/SASRec.epoch=200.lr=0.001.layer=2.head=1.hidden=50.maxlen=200.pth
+
+Generating top-50 candidates for all test users...
+Generated candidates for 500/6040 users
+Generated candidates for 1000/6040 users
+Generated candidates for 1500/6040 users
+Generated candidates for 2000/6040 users
+Generated candidates for 2500/6040 users
+Generated candidates for 3000/6040 users
+Generated candidates for 3500/6040 users
+Generated candidates for 4000/6040 users
+Generated candidates for 4500/6040 users
+Generated candidates for 5000/6040 users
+Generated candidates for 5500/6040 users
+Generated candidates for 6000/6040 users
+
+Saved 6040 user candidates to evaluation_data/
+Saved movie metadata for 3706 items
+Saved demographics for 6040 users
+
+Job finished at: Fri 13 Mar 23:00:27 GMT 2026

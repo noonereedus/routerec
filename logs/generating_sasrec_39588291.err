@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/generate-candidates.py", line 167, in <module>
+    model = SASRec(usernum, itemnum, args).to('cpu')
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/model.py", line 32, in __init__
+    self.norm_first = args.norm_first
+AttributeError: 'Namespace' object has no attribute 'norm_first'

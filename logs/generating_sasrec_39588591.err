@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/generate-candidates.py", line 151, in <module>
+    arser.add_argument('--maxlen', default=200, type=int)
+NameError: name 'arser' is not defined. Did you mean: 'parser'?

@@ -1,0 +1,19 @@
+A new version of the following files was downloaded from https://huggingface.co/THUDM/glm-4-9b-chat:
+- configuration_chatglm.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Encountered exception while importing tiktoken: No module named 'tiktoken'
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/llm-reranking.py", line 230, in <module>
+    main()
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/llm-reranking.py", line 143, in main
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name, trust_remote_code=True)
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 732, in from_pretrained
+    tokenizer_class = get_class_from_dynamic_module(class_ref, pretrained_model_name_or_path, **kwargs)
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 572, in get_class_from_dynamic_module
+    final_module = get_cached_module_file(
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 410, in get_cached_module_file
+    modules_needed = check_imports(resolved_module_file)
+  File "/rds/homes/k/kxz571/.local/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 258, in check_imports
+    raise ImportError(
+ImportError: This modeling file requires the following packages that were not found in your environment: tiktoken. Run `pip install tiktoken`
