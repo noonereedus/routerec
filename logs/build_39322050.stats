@@ -1,0 +1,27 @@
++--------------------------------------------------------------------------+
+| Job on the BlueBEAR cluster:
+| Starting at Tue Mar 10 21:16:44 2026 for kxz571(924433)
+| Identity jobid 39322050 jobname build_container
+| Running against project fengyv-kaiji and in partition icelake-shared
+| Requested cpu=1,mem=4G,node=1,billing=1 - 02:00:00 walltime
+| Allocated cpu=1,mem=4G,node=1,billing=1
+| Assigned to nodes bear-pg0104u04a
+| Command /rds/projects/f/fengyv-kaiji/vxk276/build-container.sh
+| WorkDir /rds/projects/f/fengyv-kaiji/vxk276
++--------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+| Finished at Tue Mar 10 21:22:33 2026 for kxz571(924433) on the BlueBEAR Cluster
+| Required (04:51.521 cputime, 2842017K memory used) - 00:05:49 walltime
+| JobState COMPLETING - Reason OutOfMemory
+| Exitcode 0:125
++--------------------------------------------------------------------------+
+Job efficiency stats from seff for Job ID: 39322050
+Cluster: paddington
+User/Group: kxz571/users
+State: OUT_OF_MEMORY (exit code 0)
+Cores: 1
+CPU Utilized: 00:04:52
+CPU Efficiency: 83.67% of 00:05:49 core-walltime
+Job Wall-clock time: 00:05:49
+Memory Utilized: 2.71 GB
+Memory Efficiency: 67.76% of 4.00 GB
