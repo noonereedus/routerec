@@ -1,0 +1,4 @@
+/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/analyse-consistency.py:181: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, p_val = stats.spearmanr(taus, deltas)
+/usr/local/lib/python3.10/dist-packages/scipy/stats/_stats_py.py:5655: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rpb, prob = pearsonr(x, y)
