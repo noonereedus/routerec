@@ -81,10 +81,6 @@ python rerank-dep.py \
     --device cuda \
     --max_users 500
 
-python analyse-consistency.py --model_name qwen --temperature 0.1
-python analyse-consistency.py --model_name nemotron --temperature 0.1
-python analyse-consistency.py --model_name qwen --temperature 0.0
-
 echo ''
 echo 'Job finished at:' $(date)
 
