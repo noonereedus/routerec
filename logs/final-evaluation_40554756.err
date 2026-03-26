@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/final-evaluation.py", line 288, in <module>
+    res_a = evaluate_ranking(system_a, gt_subset, item_popularity,
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/final-evaluation.py", line 34, in evaluate_ranking
+    mrr_scores[user_id] = mrr(ranked, gt)
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/metrics.py", line 24, in mrr
+    if ground_truth in top_k:
+NameError: name 'ground_truth' is not defined. Did you mean: 'ground_trut'?

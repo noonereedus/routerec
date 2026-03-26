@@ -1,0 +1,28 @@
++--------------------------------------------------------------------------+
+| Job on the BlueBEAR cluster:
+| Starting at Thu Mar 26 14:48:55 2026 for kxz571(924433)
+| Identity jobid 40556492 jobname tryBlueBear
+| Running against project fengyv-kaiji and in partition emerald-shared
+| Requested cpu=8,mem=64G,node=1,billing=8 - 03:00:00 walltime
+| Allocated cpu=8,mem=64G,node=1,billing=8
+| Assigned to nodes bear-pg0201u17b
+| Command /rds/projects/f/fengyv-kaiji/vxk276/sh-jobs/displacement-evaluation.sh
+| WorkDir /rds/projects/f/fengyv-kaiji/vxk276
++--------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+| Finished at Thu Mar 26 14:49:06 2026 for kxz571(924433) on the BlueBEAR Cluster
+| Required (00:01.834 cputime, 837K memory used) - 00:00:12 walltime
+| JobState COMPLETING - Reason None
+| Exitcode 0:0
++--------------------------------------------------------------------------+
+Job efficiency stats from seff for Job ID: 40556492
+Cluster: paddington
+User/Group: kxz571/users
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 8
+CPU Utilized: 00:00:02
+CPU Efficiency: 2.08% of 00:01:36 core-walltime
+Job Wall-clock time: 00:00:12
+Memory Utilized: 837.00 KB
+Memory Efficiency: 0.00% of 64.00 GB

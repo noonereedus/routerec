@@ -1,0 +1,14 @@
+
+Job started at: Thu Mar 26 14:01:52 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+
+######################################################################
+  MODEL: Qwen_t0.0  (run 0, t=0.0)
+######################################################################
+  Loaded 500 users from qwen_run0_main_t0.0.jsonl
+  500 users | Valid: 500 | Recoverable: 0 | Catastrophic: 0
+
+Job finished at: Thu Mar 26 14:01:54 GMT 2026

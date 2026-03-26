@@ -1,0 +1,64 @@
+
+Job started at: Thu Mar 26 13:00:09 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading evaluation data...
+Loading model: openai/gpt-oss-20b
+Model loaded.
+  [gpt run0] 10/500 (10 errors)
+  [gpt run0] 20/500 (20 errors)
+  [gpt run0] 30/500 (30 errors)
+  [gpt run0] 40/500 (40 errors)
+  [gpt run0] 50/500 (50 errors)
+  [gpt run0] 60/500 (60 errors)
+  [gpt run0] 70/500 (70 errors)
+  [gpt run0] 80/500 (80 errors)
+  [gpt run0] 90/500 (90 errors)
+  [gpt run0] 100/500 (100 errors)
+  [gpt run0] 110/500 (110 errors)
+  [gpt run0] 120/500 (120 errors)
+  [gpt run0] 130/500 (130 errors)
+  [gpt run0] 140/500 (140 errors)
+  [gpt run0] 150/500 (150 errors)
+  [gpt run0] 160/500 (160 errors)
+  [gpt run0] 170/500 (170 errors)
+  [gpt run0] 180/500 (180 errors)
+  [gpt run0] 190/500 (190 errors)
+  [gpt run0] 200/500 (200 errors)
+  [gpt run0] 210/500 (210 errors)
+  [gpt run0] 220/500 (220 errors)
+  [gpt run0] 230/500 (230 errors)
+  [gpt run0] 240/500 (240 errors)
+  [gpt run0] 250/500 (250 errors)
+  [gpt run0] 260/500 (260 errors)
+  [gpt run0] 270/500 (270 errors)
+  [gpt run0] 280/500 (280 errors)
+  [gpt run0] 290/500 (290 errors)
+  [gpt run0] 300/500 (300 errors)
+  [gpt run0] 310/500 (310 errors)
+  [gpt run0] 320/500 (320 errors)
+  [gpt run0] 330/500 (330 errors)
+  [gpt run0] 340/500 (340 errors)
+  [gpt run0] 350/500 (350 errors)
+  [gpt run0] 360/500 (360 errors)
+  [gpt run0] 370/500 (370 errors)
+  [gpt run0] 380/500 (380 errors)
+  [gpt run0] 390/500 (390 errors)
+  [gpt run0] 400/500 (400 errors)
+  [gpt run0] 410/500 (410 errors)
+  [gpt run0] 420/500 (420 errors)
+  [gpt run0] 430/500 (430 errors)
+  [gpt run0] 440/500 (440 errors)
+  [gpt run0] 450/500 (450 errors)
+  [gpt run0] 460/500 (460 errors)
+  [gpt run0] 470/500 (470 errors)
+  [gpt run0] 480/500 (480 errors)
+  [gpt run0] 490/500 (490 errors)
+  [gpt run0] 500/500 (500 errors)
+
+Done. 500 records saved to evaluation_data/reranking_logs/gpt_run0_main_t0.1.jsonl
+Errors: 500
+
+Job finished at: Thu Mar 26 13:00:29 GMT 2026

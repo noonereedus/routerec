@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/displacement-analysis.py", line 328, in <module>
+    main()
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/displacement-analysis.py", line 299, in main
+    sasrec_rankings, ground_truth = load_sasrec_data(
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/displacement-analysis.py", line 32, in load_sasrec_data
+    sasrec_rankings[user_id] = info['candidates']
+KeyError: 'candidates'
