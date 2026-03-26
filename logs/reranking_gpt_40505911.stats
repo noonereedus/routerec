@@ -1,0 +1,28 @@
++--------------------------------------------------------------------------+
+| Job on the BlueBEAR cluster:
+| Starting at Wed Mar 25 23:43:39 2026 for kxz571(924433)
+| Identity jobid 40505911 jobname tryBlueBear
+| Running against project fengyv-kaiji and in partition icelake-gpua100_80-shared
+| Requested cpu=8,mem=64G,node=1,billing=8,gres/gpu=1 - 03:00:00 walltime
+| Allocated cpu=8,mem=64G,node=1,billing=8,gres/gpu=1
+| Assigned to nodes bear-pg0208u05a
+| Command /rds/projects/f/fengyv-kaiji/vxk276/sh-jobs/rerank-gpt.sh
+| WorkDir /rds/projects/f/fengyv-kaiji/vxk276
++--------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+| Finished at Wed Mar 25 23:45:09 2026 for kxz571(924433) on the BlueBEAR Cluster
+| Required (01:02.763 cputime, 1338480K memory used) - 00:01:30 walltime
+| JobState COMPLETING - Reason None
+| Exitcode 0:0
++--------------------------------------------------------------------------+
+Job efficiency stats from seff for Job ID: 40505911
+Cluster: paddington
+User/Group: kxz571/users
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 8
+CPU Utilized: 00:01:03
+CPU Efficiency: 8.75% of 00:12:00 core-walltime
+Job Wall-clock time: 00:01:30
+Memory Utilized: 1.28 GB
+Memory Efficiency: 1.99% of 64.00 GB

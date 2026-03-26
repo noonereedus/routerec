@@ -1,0 +1,70 @@
+
+Job started at: Wed Mar 25 23:59:35 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading evaluation data...
+Loading model: openai/gpt-oss-20b
+Model loaded.
+
+=== User 1 ===
+Raw LLM response:
+ 
+We need to analyze user preferences: user watched many animated children's movies, comedies, musical, adventure, etc. They liked classic Disney animated movies (Beauty and the Beast, Aladdin, Hercules, Tarzan, etc.), also some non-Disney like Dumbo, Snow White, etc. They also liked some comedies like Ferris Bueller's Day Off, Airplane!, Pleasantville, etc. They also liked drama movies like Schindler's List, Miracle on 34th Street, Ponette. So they have a mix of family-friendly animated movies and some adult comedies/dramas.
+
+We need to recommend top 10 from candidate list (1-20). We need to minimize demographic, exposure, popularity biases. So we should avoid over-recommending only popular movies. We should include diverse genres and fairness. The user likes animation, children's, musical, comedy, adventure, etc. So we should pick movies that match those but also include some less popular ones.
+
+
+Parsed positions: [10, 1, 20]
+Mapped item IDs: [34, 355, 959]
+
+=== User 2 ===
+Raw LLM response:
+ 
+We need to pick top 10 movies from candidate list that match user's taste: user likes action, sci-fi, thriller, adventure, drama, romance, comedy, crime, etc. They have many action movies. We should diversify genres: include some adventure, sci-fi, thriller, romance, drama, comedy, crime, etc. Avoid over-recommending only popular movies. Also minimize demographic, exposure, popularity biases. We need to pick 10 numbers from 1-20.
+
+We should consider each candidate's genre overlap with user's watched list. Also consider diversity: include some movies with less common genres like horror, fantasy, etc. But user hasn't watched horror or fantasy except Star Wars (fantasy). They have some romance, drama, comedy, crime. So we can include some of those.
+
+Also consider popularity bias: avoid recommending only blockbuster hits. But we don't have popularity data. We can approximate by picking less mainstream movies. But many of these are mainstream. We can try
+Parsed positions: [10, 1, 20]
+Mapped item IDs: [1384, 1334, 20]
+
+=== User 3 ===
+Raw LLM response:
+ 
+We need to analyze user preferences: user watched many action-adventure comedies, some animation, some comedy, some adventure, some romance. They like comedic action, adventure, comedy, some romance, some drama. They also liked some classic comedies, some 80s/90s. They also liked some adventure/comedy like "Stand by Me", "Back to the Future", "Groundhog Day", "Full Monty", "Happy Gilmore". They also liked "Mummy" (horror, thriller). They liked "Being John Malkovich" (quirky). They liked "Butch Cassidy" (western). They liked "Animal House" (college). They liked "Toy Story 2" (animation). They liked "Monty Python and the Holy Grail" (comedy). They liked "Three Musketeers" (action adventure comedy). They liked "Ghost and the Darkness" (action adventure). They liked "Mission: Impossible" (action
+Parsed positions: [2]
+Mapped item IDs: [1901]
+
+=== User 4 ===
+Raw LLM response:
+ 
+We need to analyze user preferences: user watched many action, adventure, sci-fi, war, drama, romance, etc. They liked Star Wars, E.T., Jurassic Park, Predator, etc. They also watched some classic war movies, westerns, etc. They liked action, adventure, sci-fi, drama, war, romance, horror, etc. They also watched some crime? Not many. They liked some comedic? Not many. They liked some family? E.T. is children's. They liked some romance? Run Lola Run, etc. They liked some Westerns: Good, The Bad and The Ugly, Fistful of Dollars. They liked some war: Return of the Jedi, etc. They liked some horror: Jaws, Alien, King Kong. They liked some drama: Hustler, Thelma & Louise, etc.
+
+Now we need to recommend top 10 from candidate list, ensuring diversity and fairness, avoid over-recommending only popular movies. We
+Parsed positions: [10]
+Mapped item IDs: [2014]
+
+=== User 5 ===
+Raw LLM response:
+ 
+We need to analyze user preferences. They watched many movies from 1990s, with genres: drama, romance, thriller, action, sci-fi, war, documentary, comedy, children's, musical. They liked a mix of indie, art-house, mainstream. They liked "The Fifth Element" (action sci-fi), "X-Files: Fight the Future" (mystery sci-fi thriller), "The Thin Red Line" (action drama war), "The English Patient" (drama romance war), "The Crying Game" (drama romance war), "The Crow" (action romance thriller), "The Nightmare Before Christmas" (children's comedy musical), "The Madonna: Truth or Dare" (documentary). They also liked "The Pi" (sci-fi thriller), "The Man Bites Dog" (action comedy crime drama). They liked "The High Art" (drama romance). They liked "The Afterglow" (drama romance
+Parsed positions: []
+Mapped item IDs: []
+  Processed 10/100 users (0 failed)
+  Processed 20/100 users (0 failed)
+  Processed 30/100 users (0 failed)
+  Processed 40/100 users (0 failed)
+  Processed 50/100 users (0 failed)
+  Processed 60/100 users (0 failed)
+  Processed 70/100 users (0 failed)
+  Processed 80/100 users (0 failed)
+  Processed 90/100 users (0 failed)
+  Processed 100/100 users (0 failed)
+
+Done! Reranked 100 users.
+Failed: 0
+Saved to: evaluation_data/gpt_reranked.json
+
+Job finished at: Thu 26 Mar 00:11:28 GMT 2026

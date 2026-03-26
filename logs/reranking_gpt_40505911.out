@@ -1,0 +1,225 @@
+
+Job started at: Wed Mar 25 23:43:45 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+Loading evaluation data...
+Loading model: openai/gpt-oss-20b
+Model loaded.
+
+  Error for user 1: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 2: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 3: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 4: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 5: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 6: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 7: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 8: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 9: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 10: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 10/100 users (10 failed)
+
+  Error for user 11: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 12: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 13: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 14: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 15: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 16: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 17: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 18: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 19: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 20: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 20/100 users (20 failed)
+
+  Error for user 21: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 22: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 23: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 24: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 25: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 26: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 27: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 28: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 29: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 30: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 30/100 users (30 failed)
+
+  Error for user 31: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 32: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 33: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 34: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 35: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 36: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 37: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 38: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 39: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 40: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 40/100 users (40 failed)
+
+  Error for user 41: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 42: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 43: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 44: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 45: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 46: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 47: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 48: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 49: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 50: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 50/100 users (50 failed)
+
+  Error for user 51: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 52: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 53: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 54: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 55: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 56: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 57: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 58: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 59: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 60: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 60/100 users (60 failed)
+
+  Error for user 61: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 62: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 63: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 64: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 65: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 66: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 67: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 68: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 69: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 70: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 70/100 users (70 failed)
+
+  Error for user 71: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 72: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 73: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 74: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 75: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 76: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 77: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 78: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 79: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 80: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 80/100 users (80 failed)
+
+  Error for user 81: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 82: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 83: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 84: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 85: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 86: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 87: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 88: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 89: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 90: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 90/100 users (90 failed)
+
+  Error for user 91: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 92: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 93: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 94: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 95: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 96: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 97: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 98: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 99: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+
+  Error for user 100: expected mat1 and mat2 to have the same dtype, but got: c10::Half != c10::BFloat16
+  Processed 100/100 users (100 failed)
+
+Done! Reranked 100 users.
+Failed: 100
+Saved to: evaluation_data/gpt_reranked.json
+
+Job finished at: Wed 25 Mar 23:45:09 GMT 2026
