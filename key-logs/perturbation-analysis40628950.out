@@ -1,0 +1,411 @@
+
+Job started at: Fri Mar 27 11:52:14 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+
+======================================================================
+  PERTURBATION ANALYSIS: Prompt Rephrase: Qwen t=0.1 (main vs rephrase_v1)
+  408 users with both outputs valid
+  (of 500 common users)
+  [orig_only=92, pert_only=0, neither=0]
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                9.64 +/- 0.98  (min=4, max=10)
+  Kendall tau:                   0.2479 +/- 0.0691
+  Sensitivity (1-tau):           0.7521 +/- 0.0691
+
+  OVERLAP DISTRIBUTION
+   4/10:    3 (  0.7%) 
+   5/10:    2 (  0.5%) 
+   6/10:    8 (  2.0%) 
+   7/10:    8 (  2.0%) 
+   8/10:   11 (  2.7%) #
+   9/10:   41 ( 10.0%) ####
+  10/10:  335 ( 82.1%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0645
+  Mean NDCG (perturbed):         0.0625
+  Mean ΔNDCG (pert-orig):        -0.0020
+  Perturbed better:                29 (7.1%)
+  Perturbed worse:                 29 (7.1%)
+  Same:                           350 (85.8%)
+  Wilcoxon signed-rank:          stat=850.0, p=0.9660 (ns)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=+0.0639  p=0.1980 
+  sensitivity vs orig NDCG                 rho=+0.0477  p=0.3369 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=+0.0330  p=0.5065 
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   102   0.6995     0.0800     0.0719    +0.0112      9.2
+  Q2             102   0.7556     0.0415     0.0442    -0.0027     10.0
+  Q3             102   0.7556     0.0529     0.0632    -0.0103     10.0
+  Q4 (volatile)   102   0.7976     0.0835     0.0706    +0.0144      9.4
+
+  AMONG USERS WHERE PERTURBATION CHANGED QUALITY (n=58):
+  Pert better     (n= 29):  avg_sens=0.7255  avg_overlap=9.2
+  Pert worse      (n= 29):  avg_sens=0.7704  avg_overlap=9.6
+  Mann-Whitney (better vs worse sens): U=331.5, p=0.1233 (ns)
+
+======================================================================
+  PERTURBATION ANALYSIS: Run Variance: Qwen t=0.1 (run0 vs run1)
+  500 users with both outputs valid
+  (of 500 common users)
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                9.99 +/- 0.22  (min=5, max=10)
+  Kendall tau:                   0.9957 +/- 0.0499
+  Sensitivity (1-tau):           0.0043 +/- 0.0499
+
+  OVERLAP DISTRIBUTION
+   5/10:    1 (  0.2%) 
+  10/10:  499 ( 99.8%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0705
+  Mean NDCG (perturbed):         0.0711
+  Mean ΔNDCG (pert-orig):        +0.0006
+  Perturbed better:                 1 (0.2%)
+  Perturbed worse:                  0 (0.0%)
+  Same:                           499 (99.8%)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=+0.0891  p=0.0465 *
+  sensitivity vs orig NDCG                 rho=+0.0488  p=0.2763 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=-0.0049  p=0.9124 
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   125   0.0000     0.0890     0.0890    +0.0247     10.0
+  Q2             125   0.0000     0.0627     0.0627    -0.0130     10.0
+  Q3             125   0.0000     0.0516     0.0516    -0.0060     10.0
+  Q4 (volatile)   125   0.0171     0.0787     0.0811    +0.0142     10.0
+
+======================================================================
+  PERTURBATION ANALYSIS: Run Variance: Qwen t=0.7 (run0 vs run1)
+  500 users with both outputs valid
+  (of 500 common users)
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                9.50 +/- 1.12  (min=4, max=10)
+  Kendall tau:                   0.8438 +/- 0.2636
+  Sensitivity (1-tau):           0.1562 +/- 0.2636
+
+  OVERLAP DISTRIBUTION
+   4/10:    1 (  0.2%) 
+   5/10:    8 (  1.6%) 
+   6/10:   10 (  2.0%) #
+   7/10:   22 (  4.4%) ##
+   8/10:   28 (  5.6%) ##
+   9/10:   43 (  8.6%) ####
+  10/10:  388 ( 77.6%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0690
+  Mean NDCG (perturbed):         0.0665
+  Mean ΔNDCG (pert-orig):        -0.0024
+  Perturbed better:                10 (2.0%)
+  Perturbed worse:                 15 (3.0%)
+  Same:                           475 (95.0%)
+  Wilcoxon signed-rank:          stat=108.0, p=0.1422 (ns)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=+0.0767  p=0.0868 
+  sensitivity vs orig NDCG                 rho=-0.0133  p=0.7659 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=+0.1483  p=0.0009 ***
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   125   0.0000     0.0948     0.0966    -0.0025      9.7
+  Q2             125   0.0000     0.0352     0.0381    -0.0030     10.0
+  Q3             125   0.0629     0.0769     0.0733    +0.0157      9.5
+  Q4 (volatile)   125   0.5619     0.0689     0.0582    +0.0035      8.8
+
+  AMONG USERS WHERE PERTURBATION CHANGED QUALITY (n=25):
+  Pert better     (n= 10):  avg_sens=0.3017  avg_overlap=8.3
+  Pert worse      (n= 15):  avg_sens=0.3655  avg_overlap=8.8
+  Mann-Whitney (better vs worse sens): U=58.0, p=0.3590 (ns)
+
+======================================================================
+  PERTURBATION ANALYSIS: Run Variance: Nemotron t=0.7 (run0 vs run1)
+  197 users with both outputs valid
+  (of 500 common users)
+  [orig_only=117, pert_only=108, neither=78]
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                8.24 +/- 2.86  (min=0, max=10)
+  Kendall tau:                   0.5123 +/- 0.4756
+  Sensitivity (1-tau):           0.4877 +/- 0.4756
+
+  OVERLAP DISTRIBUTION
+   0/10:    2 (  1.0%) 
+   1/10:    9 (  4.6%) ##
+   2/10:    6 (  3.0%) #
+   3/10:    5 (  2.5%) #
+   4/10:    9 (  4.6%) ##
+   5/10:    5 (  2.5%) #
+   6/10:    6 (  3.0%) #
+   7/10:    5 (  2.5%) #
+   8/10:   16 (  8.1%) #####
+   9/10:   13 (  6.6%) ####
+  10/10:  121 ( 61.4%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0692
+  Mean NDCG (perturbed):         0.0614
+  Mean ΔNDCG (pert-orig):        -0.0078
+  Perturbed better:                10 (5.1%)
+  Perturbed worse:                 13 (6.6%)
+  Same:                           174 (88.3%)
+  Wilcoxon signed-rank:          stat=102.0, p=0.2732 (ns)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=-0.1470  p=0.0453 *
+  sensitivity vs orig NDCG                 rho=-0.0403  p=0.5852 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=+0.2065  p=0.0047 **
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)    46   0.0000     0.0696     0.0687    +0.0053      9.3
+  Q2              46   0.2051     0.0870     0.0696    +0.0271      9.0
+  Q3              46   0.6004     0.0530     0.0638    -0.0135      9.0
+  Q4 (volatile)    48   1.1177     0.0763     0.0523    +0.0105      7.4
+
+  AMONG USERS WHERE PERTURBATION CHANGED QUALITY (n=23):
+  Pert better     (n= 10):  avg_sens=0.8845  avg_overlap=6.3
+  Pert worse      (n= 13):  avg_sens=0.7803  avg_overlap=6.7
+  Mann-Whitney (better vs worse sens): U=65.5, p=0.4335 (ns)
+
+======================================================================
+  PERTURBATION ANALYSIS: Candidate Reverse: Qwen t=0.1
+  500 users with both outputs valid
+  (of 500 common users)
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                9.98 +/- 0.27  (min=5, max=10)
+  Kendall tau:                   0.9927 +/- 0.0446
+  Sensitivity (1-tau):           0.0073 +/- 0.0446
+
+  OVERLAP DISTRIBUTION
+   5/10:    1 (  0.2%) 
+   7/10:    1 (  0.2%) 
+   9/10:    3 (  0.6%) 
+  10/10:  495 ( 99.0%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0705
+  Mean NDCG (perturbed):         0.0730
+  Mean ΔNDCG (pert-orig):        +0.0025
+  Perturbed better:                 3 (0.6%)
+  Perturbed worse:                  0 (0.0%)
+  Same:                           497 (99.4%)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=+0.0632  p=0.1583 
+  sensitivity vs orig NDCG                 rho=+0.0404  p=0.3675 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=+0.2370  p=0.0000 ***
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   125   0.0000     0.0856     0.0856    +0.0237     10.0
+  Q2             125   0.0000     0.0603     0.0603    -0.0110     10.0
+  Q3             125   0.0000     0.0546     0.0546    -0.0048     10.0
+  Q4 (volatile)   125   0.0291     0.0816     0.0914    +0.0120      9.9
+
+======================================================================
+  PERTURBATION ANALYSIS: Candidate Random: Qwen t=0.1
+  500 users with both outputs valid
+  (of 500 common users)
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                9.95 +/- 0.46  (min=3, max=10)
+  Kendall tau:                   0.9802 +/- 0.1055
+  Sensitivity (1-tau):           0.0198 +/- 0.1055
+
+  OVERLAP DISTRIBUTION
+   3/10:    1 (  0.2%) 
+   5/10:    2 (  0.4%) 
+   8/10:    1 (  0.2%) 
+   9/10:    4 (  0.8%) 
+  10/10:  492 ( 98.4%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0705
+  Mean NDCG (perturbed):         0.0693
+  Mean ΔNDCG (pert-orig):        -0.0012
+  Perturbed better:                 2 (0.4%)
+  Perturbed worse:                  3 (0.6%)
+  Same:                           495 (99.0%)
+  Wilcoxon signed-rank:          stat=5.0, p=0.5002 (ns)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=+0.0724  p=0.1061 
+  sensitivity vs orig NDCG                 rho=+0.1044  p=0.0195 *
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=+0.2962  p=0.0000 ***
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   125   0.0000     0.0729     0.0729    +0.0112     10.0
+  Q2             125   0.0000     0.0520     0.0520    -0.0089     10.0
+  Q3             125   0.0000     0.0546     0.0546    -0.0048     10.0
+  Q4 (volatile)   125   0.0791     0.1026     0.0980    +0.0224      9.8
+
+  AMONG USERS WHERE PERTURBATION CHANGED QUALITY (n=5):
+  Pert better     (n=  2):  avg_sens=0.4167  avg_overlap=7.0
+  Pert worse      (n=  3):  avg_sens=0.3037  avg_overlap=9.7
+
+======================================================================
+  PERTURBATION ANALYSIS: Candidate Reverse: Qwen t=0.0
+  500 users with both outputs valid
+  (of 500 common users)
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                9.98 +/- 0.24  (min=6, max=10)
+  Kendall tau:                   0.9929 +/- 0.0467
+  Sensitivity (1-tau):           0.0071 +/- 0.0467
+
+  OVERLAP DISTRIBUTION
+   6/10:    1 (  0.2%) 
+   7/10:    1 (  0.2%) 
+   9/10:    3 (  0.6%) 
+  10/10:  495 ( 99.0%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0711
+  Mean NDCG (perturbed):         0.0730
+  Mean ΔNDCG (pert-orig):        +0.0019
+  Perturbed better:                 2 (0.4%)
+  Perturbed worse:                  0 (0.0%)
+  Same:                           498 (99.6%)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=+0.0407  p=0.3634 
+  sensitivity vs orig NDCG                 rho=+0.0225  p=0.6155 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=+0.3241  p=0.0000 ***
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   125   0.0000     0.0856     0.0856    +0.0237     10.0
+  Q2             125   0.0000     0.0638     0.0638    -0.0099     10.0
+  Q3             125   0.0000     0.0546     0.0546    -0.0048     10.0
+  Q4 (volatile)   125   0.0285     0.0805     0.0879    +0.0134      9.9
+
+======================================================================
+  PERTURBATION ANALYSIS: Diversity v1: Qwen t=0.1
+  500 users with both outputs valid
+  (of 500 common users)
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                9.94 +/- 0.61  (min=2, max=10)
+  Kendall tau:                   0.9958 +/- 0.0437
+  Sensitivity (1-tau):           0.0042 +/- 0.0437
+
+  OVERLAP DISTRIBUTION
+   2/10:    1 (  0.2%) 
+   3/10:    1 (  0.2%) 
+   5/10:    2 (  0.4%) 
+   6/10:    1 (  0.2%) 
+   7/10:    1 (  0.2%) 
+  10/10:  494 ( 98.8%) ########################################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0705
+  Mean NDCG (perturbed):         0.0711
+  Mean ΔNDCG (pert-orig):        +0.0006
+  Perturbed better:                 1 (0.2%)
+  Perturbed worse:                  0 (0.0%)
+  Same:                           499 (99.8%)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=+0.1005  p=0.0246 *
+  sensitivity vs orig NDCG                 rho=+0.0653  p=0.1449 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=-0.0043  p=0.9241 
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   125   0.0000     0.0890     0.0890    +0.0247      9.9
+  Q2             125   0.0000     0.0601     0.0601    -0.0132     10.0
+  Q3             125   0.0000     0.0542     0.0542    -0.0059     10.0
+  Q4 (volatile)   125   0.0169     0.0787     0.0811    +0.0142      9.9
+
+======================================================================
+  PERTURBATION ANALYSIS: Diversity v2: Qwen t=0.1
+  500 users with both outputs valid
+  (of 500 common users)
+======================================================================
+
+  OUTPUT STABILITY (original vs perturbed)
+  Top-10 Overlap:                7.81 +/- 1.81  (min=2, max=10)
+  Kendall tau:                   0.2742 +/- 0.1403
+  Sensitivity (1-tau):           0.7258 +/- 0.1403
+
+  OVERLAP DISTRIBUTION
+   2/10:    2 (  0.4%) 
+   3/10:    7 (  1.4%) ##
+   4/10:   13 (  2.6%) ####
+   5/10:   47 (  9.4%) ##############
+   6/10:   56 ( 11.2%) #################
+   7/10:   53 ( 10.6%) ################
+   8/10:  103 ( 20.6%) ################################
+   9/10:  126 ( 25.2%) ########################################
+  10/10:   93 ( 18.6%) #############################
+
+  QUALITY: PERTURBED vs ORIGINAL
+  Mean NDCG (original):          0.0705
+  Mean NDCG (perturbed):         0.0662
+  Mean ΔNDCG (pert-orig):        -0.0043
+  Perturbed better:                52 (10.4%)
+  Perturbed worse:                 38 (7.6%)
+  Same:                           410 (82.0%)
+  Wilcoxon signed-rank:          stat=1858.0, p=0.4456 (ns)
+
+  CORRELATION: SENSITIVITY vs QUALITY
+  (Does perturbation-sensitivity predict whether LLM helps?)
+  sensitivity vs gain(orig-SASRec)         rho=-0.0035  p=0.9378 
+  sensitivity vs orig NDCG                 rho=-0.0130  p=0.7712 
+  sensitivity vs |ΔNDCG(pert-orig)|        rho=-0.0395  p=0.3786 
+
+  QUARTILE ANALYSIS: Sensitivity -> Quality
+  Quartile            N     Sens   OrigNDCG   PertNDCG  GainVsSAS  Overlap
+  ------------------------------------------------------------------------
+  Q1  (stable)   125   0.5640     0.0920     0.0823    +0.0131      6.3
+  Q2             125   0.6927     0.0650     0.0757    -0.0018      8.2
+  Q3             125   0.7629     0.0587     0.0461    +0.0069      9.4
+  Q4 (volatile)   125   0.8837     0.0664     0.0606    +0.0016      7.3
+
+  AMONG USERS WHERE PERTURBATION CHANGED QUALITY (n=90):
+  Pert better     (n= 52):  avg_sens=0.6967  avg_overlap=6.9
+  Pert worse      (n= 38):  avg_sens=0.7638  avg_overlap=7.3
+  Mann-Whitney (better vs worse sens): U=796.5, p=0.1178 (ns)
+
+  All results saved to analysis_results/perturbation_analysis.json
+
+Job finished at: Fri Mar 27 11:52:17 GMT 2026

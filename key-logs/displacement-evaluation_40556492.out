@@ -1,0 +1,215 @@
+
+Job started at: Thu Mar 26 14:49:02 GMT 2026
+=== Python Environment ===
+/usr/bin/python
+Python 3.10.12
+
+
+======================================================================
+  DISPLACEMENT ANALYSIS: Qwen_t0.0
+  (500 users with valid/recoverable LLM output)
+======================================================================
+
+  DISPLACEMENT STATISTICS
+  Top-10 Overlap:                9.99 +/- 0.13  (min=7, max=10)
+  Kendall tau (common items):    0.2446 +/- 0.0097
+  Mean Rank Displacement:        2.80 +/- 0.03
+  Max Rank Displacement:         5.01 +/- 0.11
+  Promoted from 11-20:           0.01 +/- 0.13
+
+  QUALITY CHANGE DISTRIBUTION (delta-NDCG@10)
+  Improved:              41  (8.2%)
+  Hurt:                  29  (5.8%)
+  Tied:                 430  (86.0%)
+  Mean delta-NDCG:     +0.0056
+
+  CORRELATION: DISPLACEMENT vs QUALITY
+  overlap                   rho(dNDCG)=+0.0031  p=0.9451 
+                            rho(dMRR) =+0.0031  p=0.9451 
+  kendall_tau               rho(dNDCG)=-0.0918  p=0.0402 *
+                            rho(dMRR) =-0.0918  p=0.0402 *
+  mean_displacement         rho(dNDCG)=+0.0670  p=0.1349 
+                            rho(dMRR) =+0.0670  p=0.1349 
+  num_promoted              rho(dNDCG)=-0.0031  p=0.9451 
+                            rho(dMRR) =-0.0031  p=0.9451 
+
+  QUARTILE ANALYSIS: Mean Displacement -> Quality
+  Quartile            N   Avg Disp    Avg dNDCG     Avg dMRR    Overlap
+  -------------------------------------------------------------------
+  Q1  (lowest)   125       2.79      +0.0143      +0.0197       10.0
+  Q2             125       2.80      +0.0113      +0.0146       10.0
+  Q3             125       2.80      -0.0048      -0.0054       10.0
+  Q4 (highest)   125       2.80      +0.0014      +0.0022       10.0
+
+  AMONG USERS WHERE QUALITY CHANGED (n=70):
+  Improved (n= 41):  avg_disp=2.80  avg_overlap=10.0  avg_promoted=0.0
+  Hurt     (n= 29):  avg_disp=2.80  avg_overlap=10.0  avg_promoted=0.0
+  Mann-Whitney U (improved vs hurt disp): U=609.0, p=0.4168 (ns)
+
+======================================================================
+  DISPLACEMENT ANALYSIS: Qwen_t0.1
+  (500 users with valid/recoverable LLM output)
+======================================================================
+
+  DISPLACEMENT STATISTICS
+  Top-10 Overlap:                9.99 +/- 0.22  (min=5, max=10)
+  Kendall tau (common items):    0.2442 +/- 0.0095
+  Mean Rank Displacement:        2.80 +/- 0.03
+  Max Rank Displacement:         5.01 +/- 0.12
+  Promoted from 11-20:           0.01 +/- 0.22
+
+  QUALITY CHANGE DISTRIBUTION (delta-NDCG@10)
+  Improved:              40  (8.0%)
+  Hurt:                  30  (6.0%)
+  Tied:                 430  (86.0%)
+  Mean delta-NDCG:     +0.0050
+
+  CORRELATION: DISPLACEMENT vs QUALITY
+  overlap                   rho(dNDCG)=+0.1283  p=0.0041 **
+                            rho(dMRR) =+0.1170  p=0.0088 **
+  kendall_tau               rho(dNDCG)=-0.0747  p=0.0952 
+                            rho(dMRR) =-0.0787  p=0.0786 
+  mean_displacement         rho(dNDCG)=+0.0797  p=0.0749 
+                            rho(dMRR) =+0.0797  p=0.0749 
+  num_promoted              rho(dNDCG)=-0.1283  p=0.0041 **
+                            rho(dMRR) =-0.1170  p=0.0088 **
+
+  QUARTILE ANALYSIS: Mean Displacement -> Quality
+  Quartile            N   Avg Disp    Avg dNDCG     Avg dMRR    Overlap
+  -------------------------------------------------------------------
+  Q1  (lowest)   125       2.80      +0.0118      +0.0189       10.0
+  Q2             125       2.80      +0.0113      +0.0146       10.0
+  Q3             125       2.80      -0.0048      -0.0054       10.0
+  Q4 (highest)   125       2.80      +0.0014      +0.0022       10.0
+
+  AMONG USERS WHERE QUALITY CHANGED (n=70):
+  Improved (n= 40):  avg_disp=2.81  avg_overlap=10.0  avg_promoted=0.0
+  Hurt     (n= 30):  avg_disp=2.80  avg_overlap=9.8  avg_promoted=0.2
+  Mann-Whitney U (improved vs hurt disp): U=615.0, p=0.4025 (ns)
+
+======================================================================
+  DISPLACEMENT ANALYSIS: Qwen_t0.7
+  (500 users with valid/recoverable LLM output)
+======================================================================
+
+  DISPLACEMENT STATISTICS
+  Top-10 Overlap:                9.75 +/- 0.81  (min=5, max=10)
+  Kendall tau (common items):    0.2660 +/- 0.1469
+  Mean Rank Displacement:        2.73 +/- 0.45
+  Max Rank Displacement:         5.11 +/- 0.91
+  Promoted from 11-20:           0.25 +/- 0.81
+
+  QUALITY CHANGE DISTRIBUTION (delta-NDCG@10)
+  Improved:              40  (8.0%)
+  Hurt:                  30  (6.0%)
+  Tied:                 430  (86.0%)
+  Mean delta-NDCG:     +0.0034
+
+  CORRELATION: DISPLACEMENT vs QUALITY
+  overlap                   rho(dNDCG)=+0.0354  p=0.4299 
+                            rho(dMRR) =+0.0324  p=0.4703 
+  kendall_tau               rho(dNDCG)=+0.0056  p=0.9011 
+                            rho(dMRR) =+0.0051  p=0.9088 
+  mean_displacement         rho(dNDCG)=+0.0077  p=0.8636 
+                            rho(dMRR) =+0.0072  p=0.8726 
+  num_promoted              rho(dNDCG)=-0.0354  p=0.4299 
+                            rho(dMRR) =-0.0324  p=0.4703 
+
+  QUARTILE ANALYSIS: Mean Displacement -> Quality
+  Quartile            N   Avg Disp    Avg dNDCG     Avg dMRR    Overlap
+  -------------------------------------------------------------------
+  Q1  (lowest)   125       2.36      +0.0084      +0.0159        9.4
+  Q2             125       2.80      +0.0137      +0.0181       10.0
+  Q3             125       2.80      -0.0085      -0.0101       10.0
+  Q4 (highest)   125       2.94      +0.0001      +0.0047        9.6
+
+  AMONG USERS WHERE QUALITY CHANGED (n=70):
+  Improved (n= 40):  avg_disp=2.82  avg_overlap=9.8  avg_promoted=0.2
+  Hurt     (n= 30):  avg_disp=2.77  avg_overlap=9.6  avg_promoted=0.4
+  Mann-Whitney U (improved vs hurt disp): U=606.0, p=0.9368 (ns)
+
+======================================================================
+  DISPLACEMENT ANALYSIS: Nemotron_t0.1
+  (225 users with valid/recoverable LLM output)
+======================================================================
+
+  DISPLACEMENT STATISTICS
+  Top-10 Overlap:                8.80 +/- 2.91  (min=0, max=10)
+  Kendall tau (common items):    0.2560 +/- 0.1882
+  Mean Rank Displacement:        2.88 +/- 0.30
+  Max Rank Displacement:         5.37 +/- 0.79
+  Promoted from 11-20:           1.20 +/- 2.91
+
+  QUALITY CHANGE DISTRIBUTION (delta-NDCG@10)
+  Improved:              19  (8.4%)
+  Hurt:                  19  (8.4%)
+  Tied:                 187  (83.1%)
+  Mean delta-NDCG:     -0.0056
+
+  CORRELATION: DISPLACEMENT vs QUALITY
+  overlap                   rho(dNDCG)=+0.0945  p=0.1575 
+                            rho(dMRR) =+0.0873  p=0.1918 
+  kendall_tau               rho(dNDCG)=-0.1281  p=0.0665 
+                            rho(dMRR) =-0.1258  p=0.0716 
+  mean_displacement         rho(dNDCG)=+0.0701  p=0.3169 
+                            rho(dMRR) =+0.0729  p=0.2977 
+  num_promoted              rho(dNDCG)=-0.0945  p=0.1575 
+                            rho(dMRR) =-0.0873  p=0.1918 
+
+  QUARTILE ANALYSIS: Mean Displacement -> Quality
+  Quartile            N   Avg Disp    Avg dNDCG     Avg dMRR    Overlap
+  -------------------------------------------------------------------
+  Q1  (lowest)    51       2.71      +0.0057      +0.0088        9.5
+  Q2              51       2.80      -0.0167      -0.0202       10.0
+  Q3              51       2.80      +0.0050      +0.0061       10.0
+  Q4 (highest)    53       3.21      -0.0065      -0.0030        8.6
+
+  AMONG USERS WHERE QUALITY CHANGED (n=38):
+  Improved (n= 19):  avg_disp=3.04  avg_overlap=8.2  avg_promoted=1.8
+  Hurt     (n= 19):  avg_disp=2.93  avg_overlap=6.8  avg_promoted=3.2
+  Mann-Whitney U (improved vs hurt disp): U=128.0, p=0.4261 (ns)
+
+======================================================================
+  DISPLACEMENT ANALYSIS: Nemotron_t0.7
+  (314 users with valid/recoverable LLM output)
+======================================================================
+
+  DISPLACEMENT STATISTICS
+  Top-10 Overlap:                8.72 +/- 2.70  (min=0, max=10)
+  Kendall tau (common items):    0.1692 +/- 0.2671
+  Mean Rank Displacement:        3.05 +/- 0.68
+  Max Rank Displacement:         5.91 +/- 1.41
+  Promoted from 11-20:           1.28 +/- 2.70
+
+  QUALITY CHANGE DISTRIBUTION (delta-NDCG@10)
+  Improved:              24  (7.6%)
+  Hurt:                  24  (7.6%)
+  Tied:                 266  (84.7%)
+  Mean delta-NDCG:     -0.0006
+
+  CORRELATION: DISPLACEMENT vs QUALITY
+  overlap                   rho(dNDCG)=+0.0964  p=0.0881 
+                            rho(dMRR) =+0.0944  p=0.0948 
+  kendall_tau               rho(dNDCG)=-0.1309  p=0.0234 *
+                            rho(dMRR) =-0.1293  p=0.0251 *
+  mean_displacement         rho(dNDCG)=+0.0775  p=0.1806 
+                            rho(dMRR) =+0.0761  p=0.1885 
+  num_promoted              rho(dNDCG)=-0.0964  p=0.0881 
+                            rho(dMRR) =-0.0944  p=0.0948 
+
+  QUARTILE ANALYSIS: Mean Displacement -> Quality
+  Quartile            N   Avg Disp    Avg dNDCG     Avg dMRR    Overlap
+  -------------------------------------------------------------------
+  Q1  (lowest)    75       2.53      -0.0013      +0.0031        8.5
+  Q2              75       2.80      -0.0046      -0.0059        9.9
+  Q3              75       2.93      -0.0218      -0.0158        9.4
+  Q4 (highest)    75       3.93      +0.0304      +0.0276        8.6
+
+  AMONG USERS WHERE QUALITY CHANGED (n=48):
+  Improved (n= 24):  avg_disp=3.19  avg_overlap=7.3  avg_promoted=2.7
+  Hurt     (n= 24):  avg_disp=2.98  avg_overlap=6.8  avg_promoted=3.2
+  Mann-Whitney U (improved vs hurt disp): U=274.0, p=0.2971 (ns)
+
+  All results saved to analysis_results/displacement_analysis.json
+
+Job finished at: Thu Mar 26 14:49:05 GMT 2026
