@@ -1,0 +1,20 @@
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/rerank-dep.py", line 95
+    elif prompt_version == "diversity_v1":
+    ^^^^
+SyntaxError: invalid syntax
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/rerank-dep.py", line 95
+    elif prompt_version == "diversity_v1":
+    ^^^^
+SyntaxError: invalid syntax
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/rerank-dep.py", line 95
+    elif prompt_version == "diversity_v1":
+    ^^^^
+SyntaxError: invalid syntax
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/rerank-dep.py", line 95
+    elif prompt_version == "diversity_v1":
+    ^^^^
+SyntaxError: invalid syntax
+  File "/rds/projects/f/fengyv-kaiji/vxk276/python/SASRec.pytorch/python/rerank-dep.py", line 95
+    elif prompt_version == "diversity_v1":
+    ^^^^
+SyntaxError: invalid syntax
