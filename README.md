@@ -1,11 +1,15 @@
-The majority of the files has only been uploaded to the git repository on March 9. However, both theoretical and practical work on the project has been conducted before then with evidence documented using other means. 
+Brief navigation in case it's needed before the inspection meeting
 
-A brief timeline of repo's contents is provided below:
+[Hf-cache](/hf_cache/) is a folder mostly used by the LLM transformers' scripts to store the weights. They are too heavy to push to gitlab. One got through accidentally.
 
-The 1st semester and January of semester 2 were dedicated to researching the topic and doing reading. The result of this is [the research proposal](/research-pdfs/Original-Proposal.pdf), a [draft of which](/research-pdfs/original-proposal-draft.doc) was uploaded on February 6 as the original readme.
+[The log folder](/logs/) contains most of the job logs from my work on both supercomputers - they also include all the outputs. I did remove failed or similar logs during Weeks 2-5, but I stopped doing that later. Since there are too many, I've placed all the important milestons in a [tidier folder](/key-logs/). Essentially the most important folder for my study.
 
-Afterwords,though uploaded in March, the practical experiments were conducted on an external supercomputer in February (Bristol's Isembard HPC). The *.out files in [the log folder](/logs) have timestamps confirming said activity.
+[ML1M](/ml-1m/) is just the imported Movielens1M dataset. No work of mine.
 
-The beginning of March required additional research to narrow down the project's scope, resulting in creation of a [literature review](/research-pdfs/Bias-Research.pdf) establishing a foundation in terms of problems & metrics, and the [final specification](/research-pdfs/Final-Project-Specification.pdf), that were uploaded with the prior work evidence to the repository.
+Since I was working on SASRec version cloned from git, the work I did inside (which was most of the reranking data and evaluation scripts) was technically in a different repo and I couldn't push it here. I tried duplicating everything into [old-python](/old-python/), but it got too bothersome at later stages. Eventually, on the submission day, I simply [took it out of the SASRec directory](/python/)
 
-Consecutive work evidence will be uploaded to the repository immediately.
+Since I wrote 2 large literature reviews, I had around 60 references and wanted to keep the most important ones in [primary references](/primary-references/), but I later trimmed the list down manually for the report's reference section
+
+[Research-pdfs](/research-pdfs/) are content written by me (or Kaiji Zhou) exclusively and form a theoretical foundation of the project along with it's original specification.
+
+[Sh-jobs](/sh-jobs/) is a folder with important job scripts for the super-computer - serving as a display of important milestones. [Job.sh file](/job.sh) is a quick-use file for when I didn't want to save a job.
