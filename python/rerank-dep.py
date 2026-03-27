@@ -92,6 +92,48 @@ Output the candidate numbers (1-{num}) as a JSON list in your preferred order.
 
 Reordered list:"""
 
+    elif prompt_version == "diversity_v1":
+        prompt = f"""You are a movie recommendation system. Your goal is to rerank candidate movies to maximise DIVERSITY in the final list.
+
+The user has recently watched:
+{history_str}
+
+Here are candidate movies to rerank. Select the top 10 that:
+1. SPREAD ACROSS AS MANY DIFFERENT GENRES as possible (maximise genre coverage)
+2. MIX popular and niche/obscure titles (avoid all-blockbuster lists)
+3. Still reasonably match the user's taste
+
+Diversity is MORE IMPORTANT than pure relevance. A good list covers 5+ distinct genres.
+
+Candidates:
+{candidates_str}
+
+Return ONLY the numbers (1-{num}) in your recommended order as a JSON list, like:
+[3, 7, 1, 9, 5, 2, 8, 4, 10, 6]
+
+Your top 10 diversity-optimised list:"""
+
+    elif prompt_version == "diversity_v2":
+        prompt = f"""You are a diversity-focused movie recommender. Your PRIMARY objective is to maximise the variety of genres in your recommendations. Your SECONDARY objective is relevance to the user.
+
+The user has recently watched:
+{history_str}
+
+Candidates:
+{candidates_str}
+
+INSTRUCTIONS:
+- Select exactly 10 movies
+- Maximise GENRE COVERAGE: include as many different genres as possible (aim for 8+ unique genres across your 10 picks)
+- Maximise INTRA-LIST DIVERSITY: consecutive movies should NOT share genres. Each pair of movies in your list should be as genre-dissimilar as possible
+- Include at least one movie from a genre the user has NOT watched before
+- Aim to improve the Gini index score
+- Prefer lesser-known titles over blockbusters when relevance is similar
+
+Return ONLY the numbers (1-{num}) as a JSON list.
+
+Your diversity-maximised list:"""
+
     else:
         raise ValueError(f"Unknown prompt version: {prompt_version}")
 
@@ -209,6 +251,11 @@ def main():
     parser.add_argument('--prompt_version', default='main', type=str,
                         help='Prompt variant: main, rephrase_v1')
     parser.add_argument('--temperature', default=0.1, type=float)
+    parser.add_argument('--candidate_order', default='original', type=str,
+                    choices=['original', 'reverse', 'random'],
+                    help='Candidate presentation order: original, reverse, random')
+    parser.add_argument('--shuffle_seed', default=67, type=int,
+                    help='Random seed for shuffle (reproducibility)')
     args = parser.parse_args()
 
     # ---- Load data ----
@@ -238,8 +285,9 @@ def main():
     log_dir = os.path.join(args.data_dir, 'reranking_logs')
     os.makedirs(log_dir, exist_ok=True)
 
+    order_suffix = f"_{args.candidate_order}" if args.candidate_order != 'original' else ""
     log_filename = (f"{args.output_name}_run{args.run_index}"
-                    f"_{args.prompt_version}_t{args.temperature}.jsonl")
+                f"_{args.prompt_version}{order_suffix}_t{args.temperature}.jsonl")
     log_path = os.path.join(log_dir, log_filename)
 
     # Resume support: skip already-completed users
@@ -276,6 +324,15 @@ def main():
                 title = meta.get('title', f'Movie {item_id}')
                 genres = ', '.join(meta.get('genres', ['Unknown']))
                 candidate_movies.append((item_id, title, genres))
+                
+            original_order = list(range(len(candidate_movies)))
+            if args.candidate_order == 'reverse':
+                candidate_movies = candidate_movies[::-1]
+            elif args.candidate_order == 'random':
+                rng = np.random.RandomState(args.shuffle_seed + hash(user_id) % 10000)
+                indices = list(range(len(candidate_movies)))
+                rng.shuffle(indices)
+                candidate_movies = [candidate_movies[i] for i in indices]
 
             user_history = get_user_history_titles(
                 int(user_id), user_train, movie_metadata
@@ -295,6 +352,7 @@ def main():
                 'timestamp': time.strftime('%Y-%m-%dT%H:%M:%S'),
                 'input_candidate_ids': sasrec_items,
                 'num_candidates': num_candidates,
+                'candidate_order': args.candidate_order,
             }
 
             try:

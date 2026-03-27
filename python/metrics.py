@@ -18,10 +18,11 @@ def ndcg_at_k(ranked_list, ground_truth, k=10):
     return 0.0
 
 
-def mrr(ranked_list, ground_truth):
+def mrr(ranked_list, ground_truth, k=10):
     """Mean Reciprocal Rank."""
-    if ground_truth in ranked_list:
-        rank = ranked_list.index(ground_truth) + 1
+    top_k = ranked_list[:k]
+    if ground_truth in top_k:
+        rank = top_k.index(ground_truth) + 1
         return 1.0 / rank
     return 0.0
 

@@ -40,7 +40,7 @@ def build_rerank_prompt(user_history, candidate_movies):
     
     candidates_str = ""
     for i, (item_id, title, genres) in enumerate(candidate_movies, 1):
-        candidates_str += f"  {i}. [ID:{item_id}] {title} ({genres})\n"
+        candidates_str += f"  {i}. {title} ({genres})\n"
     
     prompt = f"""You are a movie recommendation system. Your goal is to rerank candidate movies to best match the user's preferences while ensuring diversity and fairness.
 
@@ -50,8 +50,9 @@ The user has recently watched:
 Here are candidate movies to rerank. Select and rerank the top 10 that best match this user's taste while also including diverse genres and avoiding over-recommending only popular movies:
 {candidates_str}
 
-Return ONLY a JSON list of the movie IDs in your recommended order, like:
-[ID1, ID2, ID3, ID4, ID5, ID6, ID7, ID8, ID9, ID10]
+Your primary task is to minimize the demographic, exposure and popularity biases.
+Return ONLY the numbers (1-{len(candidate_movies)}) in your recommended order as a JSON list, like:
+[3, 7, 1, 9, 5, 2, 8, 4, 10, 6]
 
 Your top 10 reranked list:"""
     
@@ -61,11 +62,16 @@ Your top 10 reranked list:"""
 def parse_llm_response(response_text, valid_item_ids):
     """
     Parse the LLM's response to extract reranked item IDs.
+    Handles formats like:
+      [355, 1191, 1905]
+      [ID355, ID1191, ID1905]
+      [ID:355, ID:1191, ID:1905]
+      ["ID355", "ID1191"]
     """
     import re
-    
+    cleaned = re.sub(r'["\']?[Ii][Dd]:?\s*', '', response_text)
     # Try to find a JSON list
-    match = re.search(r'$$[\d,\s]+$$', response_text)
+    match = re.search(r'$$[\d,\s]+$$', cleaned)
     if match:
         try:
             ids = json.loads(match.group())
@@ -77,12 +83,14 @@ def parse_llm_response(response_text, valid_item_ids):
             pass
     
     # Fallback: find all numbers that match valid IDs
-    numbers = re.findall(r'\b(\d+)\b', response_text)
+    numbers = re.findall(r'\b(\d+)\b', cleaned)
     ids = []
     for n in numbers:
         n = int(n)
         if n in valid_item_ids and n not in ids:
             ids.append(n)
+        if len(ids) >= 10:
+            break
     
     return ids
 
@@ -143,7 +151,6 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(args.model_name, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         args.model_name,
-        dtype=torch.float16,
         device_map="auto",
         trust_remote_code=True,
         use_safetensors=True
@@ -189,24 +196,29 @@ def main():
         # Get LLM reranking
         try:
             reranked_ids, raw_response = rerank_with_llm(
-                model, tokenizer, prompt, valid_item_ids, args.device
+                model, tokenizer, prompt, set(range(1, len(sasrec_items)+1)), args.device
             )
             
-            if idx < 5:  # First 5 users
+            reranked_item_ids = []
+            for pos in reranked_ids:
+                if 1 <= pos <= len(sasrec_items):
+                    reranked_item_ids.append(sasrec_items[pos - 1])
+            
+            if idx < 5:
                 print(f"\n=== User {user_id} ===")
                 print(f"Raw LLM response:\n{raw_response}")
-                print(f"Parsed IDs: {reranked_ids}")
-                print(f"Num parsed: {len(reranked_ids)}")
+                print(f"Parsed positions: {reranked_ids}")
+                print(f"Mapped item IDs: {reranked_item_ids}")
             
             # If LLM returned fewer than 10, fill with original SASRec order
-            if len(reranked_ids) < args.top_k_rerank:
+            if len(reranked_item_ids) < args.top_k_rerank:
                 for item_id in sasrec_items:
-                    if item_id not in reranked_ids:
-                        reranked_ids.append(item_id)
-                    if len(reranked_ids) >= args.top_k_rerank:
+                    if item_id not in reranked_item_ids:
+                        reranked_item_ids.append(item_id)
+                    if len(reranked_item_ids) >= args.top_k_rerank:
                         break
             
-            reranked_results[user_id] = reranked_ids[:args.top_k_rerank]
+            reranked_results[user_id] = reranked_item_ids[:args.top_k_rerank]
             
         except Exception as e:
             print(f"\n  Error for user {user_id}: {e}")

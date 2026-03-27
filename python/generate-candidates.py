@@ -130,10 +130,19 @@ def generate_all_candidates(model, dataset, args, top_k=50):
         top_k_items = [item_indices[i] for i in top_k_idx]
         top_k_scores = [float(predictions[i]) for i in top_k_idx]
         
+        #making sure ground truth is a candidate
+        gt = user_test[user_id][0]
+        if gt not in top_k_items:
+            gt_score = float(predictions[gt - 1])
+            # Insert at a random position (not first, not last)
+            insert_pos = np.random.randint(1, len(top_k_items))
+            top_k_items.insert(insert_pos, gt)
+            top_k_scores.insert(insert_pos, gt_score)
+
         all_candidates[user_id] = {
             'items': top_k_items,
             'scores': top_k_scores,
-            'ground_truth': user_test[user_id][0]
+            'ground_truth': gt
         }
         
         if user_id % 500 == 0:
