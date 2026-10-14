@@ -1,4 +1,4 @@
-Brief navigation in case it's needed before the inspection meeting
+Brief navigation below
 
 [Hf-cache](/hf_cache/) is a folder mostly used by the LLM transformers' scripts to store the weights. They are too heavy to push to gitlab. One got through accidentally.
 
