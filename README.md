@@ -2,7 +2,7 @@
 
 **What happens when you put an LLM into a production-style recommender pipeline, and what do you do when it breaks?**
 
-This is my final year project (BSc Computer Science, University of Birmingham, **First Class, 78%**). It stress-tests three open-weight LLMs as zero-shot rerankers on top of a SASRec recommender, measures how and when they fail, and builds a fallback mechanism that keeps the quality gains without the failures.
+This is my final year project (BSc Computer Science, University of Birmingham, **First Class*). It stress-tests three open-weight LLMs as zero-shot rerankers on top of a SASRec recommender, measures how and when they fail, and builds a fallback mechanism that keeps the quality gains without the failures.
 
 This repository is the foundation of **[RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation](https://arxiv.org/abs/2607.09908)** (Zhou, **Kalmykov**, Feng). The pipeline and conclusions from these preliminary dependability experiments were used to build the router framework in the paper. I co-authored it as 2nd author, and it was accepted at the **SIGIR 2026 AgentSearch workshop**, ranked joint-1st by average reviewer score.
 
