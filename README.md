@@ -12,12 +12,12 @@ This repository is the foundation of **[RouteRec: Strict Evaluation of Recommend
 
 | | Finding |
 |---|---|
-| 🛡️ **Tiered fallback works** | A two-tier failure taxonomy (recoverable vs fatal) lets the pipeline repair fixable LLM output such as duplicates, instead of throwing it away. This recovers quality that a naive "fall back on any error" policy discards. |
-| 📈 **Ranking quality up** | Qwen2-7B reranking lifted **NDCG@10 by 8.5%** (0.0655 → 0.0711) and **MRR by 21.5%** (0.0362 → 0.0440) over the SASRec baseline, with HR@10 unchanged. |
-| 🎯 **Prompt wording dominates** | Rewording the prompt is **~100× more destabilising** than reordering the candidate list, which contradicts the literature's focus on position bias. |
-| 🧩 **Instruction tuning beats size** | Valid-output rate: Qwen2-7B-Instruct **100%**, Nemotron-Mini-4B **45%**, gpt-oss-20b **0%**. Format compliance comes from instruction-tuning quality, not parameter count. |
-| ⚖️ **Diversity prompts backfire** | Aggressive diversity prompting cut popularity bias but *reduced* genre diversity: the LLM confuses "diverse" with "obscure". Apparent fairness gains came from degrading the advantaged group. |
-| ❌ **A documented negative result** | Self-consistency across repeated LLM calls showed no significant correlation with quality, so it does not work as a reliability signal for reranking. |
+|  **Tiered fallback works** | A two-tier failure taxonomy (recoverable vs fatal) lets the pipeline repair fixable LLM output such as duplicates, instead of throwing it away. This recovers quality that a naive "fall back on any error" policy discards. |
+|  **Ranking quality up** | Qwen2-7B reranking lifted **NDCG@10 by 8.5%** (0.0655 → 0.0711) and **MRR by 21.5%** (0.0362 → 0.0440) over the SASRec baseline, with HR@10 unchanged. |
+|  **Prompt wording dominates** | Rewording the prompt is **~100× more destabilising** than reordering the candidate list, which contradicts the literature's focus on position bias. |
+|  **Instruction tuning beats size** | Valid-output rate: Qwen2-7B-Instruct **100%**, Nemotron-Mini-4B **45%**, gpt-oss-20b **0%**. Format compliance comes from instruction-tuning quality, not parameter count. |
+|  **Diversity prompts backfire** | Aggressive diversity prompting cut popularity bias but *reduced* genre diversity: the LLM confuses "diverse" with "obscure". Apparent fairness gains came from degrading the advantaged group. |
+|  **A documented negative result** | Self-consistency across repeated LLM calls showed no significant correlation with quality, so it does not work as a reliability signal for reranking. |
 
 ## Pipeline
 
