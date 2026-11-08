@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venvs/
+.venv/
+
+# Hugging Face model cache (weights are too large for Git)
+hf_cache/
+
+# OS
+.DS_Store
