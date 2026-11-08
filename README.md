@@ -6,7 +6,7 @@ This is my final year project (BSc Computer Science, University of Birmingham, *
 
 This repository is the foundation of **[RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation](https://arxiv.org/abs/2607.09908)** (Zhou, **Kalmykov**, Feng). The pipeline and conclusions from these preliminary dependability experiments were used to build the router framework in the paper. I co-authored it as 2nd author, and it was accepted at the **SIGIR 2026 AgentSearch workshop**, ranked joint-1st by average reviewer score.
 
-📄 [Final report (PDF)](research-pdfs/Final-Report.pdf)
+📄 [Final report (PDF)](research-pdfs/Final-report.pdf)
 
 ## Key findings
 
